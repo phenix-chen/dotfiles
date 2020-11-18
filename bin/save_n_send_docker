@@ -1,0 +1,2 @@
+docker save -o $1 $2
+scp $1 chx@10.1.8.83:/home/chx
