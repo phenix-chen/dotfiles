@@ -75,7 +75,6 @@ plugins=(
   docker
   docker-compose
   sudo
-  conda-zsh-completion
   zsh-completions
 )
 source $ZSH/oh-my-zsh.sh
