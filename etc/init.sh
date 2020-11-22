@@ -23,8 +23,8 @@ if [ -f ~/.local/etc/local.sh ]; then
 fi
 
 # 如果是zsh，source init.zsh
-if [ -n "$ZSH_VERSION" ] && [ -f ~/.local/etc/init.zsh ]; then
-    . ~/.local/etc/init.zsh
+if [ -n "$ZSH_VERSION" ] && [ -f ~/.local/etc/zsh/init.zsh ]; then
+    . ~/.local/etc/zsh/init.zsh
 fi
 
 # 如果是 zsh 的话，source 一下 ~/.local/etc/function.sh
