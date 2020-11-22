@@ -40,8 +40,9 @@ echo ". $ETC/init.sh" >> ~/.zshrc
 
 # vim
 touch ~/.vimrc
-gsed -i "\:$ETC/vimrc.vim:d" ~/.vimrc
-echo "source $ETC/vimrc.vim" >> ~/.vimrc
+gsed -i "\:$ETC/vim/vimrc.vim:d" ~/.vimrc
+echo "source $ETC/vim/vimrc.vim" >> ~/.vimrc
+
 if ! [ -d ~/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi

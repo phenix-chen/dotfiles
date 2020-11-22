@@ -65,8 +65,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 set runtimepath+=~/.vim_runtime
-source ~/.local/etc/basic.vim
-source ~/.local/etc/plugins_config.vim
-source ~/.local/etc/filetypes.vim
-source ~/.local/etc/extended.vim
+source ~/.local/etc/vim/basic.vim
+source ~/.local/etc/vim/plugins_config.vim
+source ~/.local/etc/vim/filetypes.vim
+source ~/.local/etc/vim/extended.vim
 set clipboard=unnamed
