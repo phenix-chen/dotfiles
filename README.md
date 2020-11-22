@@ -23,6 +23,11 @@
 - `path.zsh`: 配置应用路径的脚本
 - `init.zsh`: 应用启动脚本
 
+## workflow
+- 用bootstrap.sh配置默认配置项
+- 在home目录下的dotfiles中配置临时的修改项
+- 临时配置使用一段时间，测试稳定后，加入仓库
+
 ## TODO
 - [ ] vim
 - [ ] tmux
