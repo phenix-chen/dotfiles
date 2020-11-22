@@ -68,7 +68,6 @@ plugins=(
   git
   osx
   vscode
-  vi-mode
   pip
   themes
   timer
@@ -110,14 +109,6 @@ autoload -U compinit && compinit
 # login set up
 # /usr/local/sbin/privoxy /usr/local/etc/privoxy/config
 
-#####################
-# Content
-#####################
-# Environment variable
-# Language config
-# Tools
-
-
 
 #####################
 # Functions
@@ -133,22 +124,6 @@ alias sozsh="source ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias -s py=vim
 alias sc="docker exec -it centos7_work /bin/bash"
-
-
-############################
-# Language config
-############################
-# java environment
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.8.jdk/Contents/Home/"
-export PATH=$JAVA_HOME/bin:$PATH
-
-# go environment
-export GOPATH="/Users/chen/go"
-export PATH="/Users/chen/go/bin:${PATH}"
-
-# KUBECONFIG
-# export KUBECONFIG=$(echo ~/.kube/config)
-############################
 
 
 ############################
@@ -169,13 +144,7 @@ eval $(thefuck --alias)
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Tmux
-alias attach="tmux attach-session -t"
-alias tls="tmux ls"
-alias tmk="tmux kill-session -t"
-alias tvi="tmuxp load ide"
 export EDITOR='vim'
-# source ~/.bin/tmuxinator.zsh
 
 # Vim
 alias vimconfig="vim ~/.vimrc"
