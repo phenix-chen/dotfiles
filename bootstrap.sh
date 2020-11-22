@@ -1,8 +1,18 @@
 set -e
-set -x
+# set -x
 
 ETC=~/.local/etc
 BIN=~/.local/bin
+
+read -p "This may delete ~/.local/etc and ~/.loca/etc and rebuild them. Are you sure? (y/n)" -n 1
+echo ""
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    rm -rf $ETC
+    rm -rf $BIN
+else
+    exit 1
+fi
 
 if ! [ -d $ETC ]; then
     mkdir -p $ETC
@@ -25,12 +35,12 @@ cp bootstrap.sh $BIN/
 
 # source init.sh
 touch ~/.zshrc
-sed -i "\:$ETC/init.sh:d" ~/.zshrc
+gsed -i "\:$ETC/init.sh:d" ~/.zshrc
 echo ". $ETC/init.sh" >> ~/.zshrc
 
 # vim
 touch ~/.vimrc
-sed -i "\:$ETC/vimrc.vim:d" ~/.vimrc
+gsed -i "\:$ETC/vimrc.vim:d" ~/.vimrc
 echo "source $ETC/vimrc.vim" >> ~/.vimrc
 if ! [ -d ~/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
