@@ -28,7 +28,7 @@ done
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
-    if test ! $(basename $file) = "init.zsh"
+    if test ! $(basename $file) = "initzsh.zsh"
     then
         echo $file
         source $file
