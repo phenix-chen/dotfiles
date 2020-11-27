@@ -24,7 +24,7 @@ fi
 
 # 如果是zsh，source init.zsh
 if [ -n "$ZSH_VERSION" ] && [ -f ~/.local/etc/zsh/initzsh.zsh ]; then
-    . ~/.local/etc/zsh/initzsh.zsh
+    . ~/.local/etc/zsh/zshrc.zsh
 fi
 
 # 如果是 zsh 的话，source 一下 ~/.local/etc/function.sh

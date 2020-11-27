@@ -39,9 +39,9 @@ gsed -i "\:$ETC/init.sh:d" ~/.zshrc
 echo ". $ETC/init.sh" >> ~/.zshrc
 
 # vim
-touch ~/.vimrc
-gsed -i "\:$ETC/vim/vimrc.vim:d" ~/.vimrc
-echo "source $ETC/vim/vimrc.vim" >> ~/.vimrc
+# touch ~/.vimrc
+# gsed -i "\:$ETC/vim/vimrc.vim:d" ~/.vimrc
+# echo "source $ETC/vim/vimrc.vim" >> ~/.vimrc
 
 
 . ~/.zshrc

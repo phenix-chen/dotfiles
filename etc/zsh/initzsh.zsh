@@ -21,6 +21,7 @@ config_files=($ZSH/**/*.zsh)
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do
+    echo $file
     source $file
 done
 
@@ -29,18 +30,19 @@ for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
     if test ! $(basename $file) = "initzsh.zsh"
     then
+        echo $file
         source $file
     fi
 done
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+# autoload -U compinit
+# compinit
 
 # load every completion after autocomplete loads
-for file in ${(M)config_files:#*/completion.zsh}
-do
-    source $file
-done
+# for file in ${(M)config_files:#*/completion.zsh}
+# do
+#     source $file
+# done
 
-unset config_files
+# unset config_files
