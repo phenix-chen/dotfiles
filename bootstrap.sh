@@ -1,10 +1,9 @@
 set -e
 # set -x
 
-ETC=~/.local/etc
-BIN=~/.local/bin
-
-read -p "This may delete ~/.local/etc and ~/.loca/etc and rebuild them. Are you sure? (y/n)" -n 1
+ETC=~/.myconfig/etc
+BIN=~/.myconfig/bin
+read -p "This may delete ~/.myconfig/etc and ~/.myconfig/etc and rebuild them. Are you sure? (y/n)" -n 1
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -29,8 +28,8 @@ fi
 #     git clone http:
 # fi
 
-cp -rf etc/* ~/.local/etc
-cp -rf bin/* ~/.local/bin
+cp -rf etc/* $ETC
+cp -rf bin/* $BIN
 cp bootstrap.sh $BIN/
 
 # source init.sh

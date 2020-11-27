@@ -1,8 +1,8 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 " source ~/.vimrc
-source ~/.local/etc/nvim/basic.vim
-source ~/.local/etc/nvim/plugins.vim
+source ~/.myconfig/etc/nvim/basic.vim
+source ~/.myconfig/etc/nvim/plugins.vim
 
 
 " ===
