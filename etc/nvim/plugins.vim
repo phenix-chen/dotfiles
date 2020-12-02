@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'mileszs/ack.vim'
@@ -130,9 +131,9 @@ nmap <leader>f  <Plug>(coc-format-selected)
 nmap tt :CocCommand explorer<cr>
 
 " ===
-" === FZF
+" === Leaderf
 " ===
-nmap <c-p> :Leaderf file<cr>
+" nmap <c-p> :Leaderf file<cr>
 
 
 " ===
@@ -183,3 +184,11 @@ let g:bullets_enabled_file_types = [
 " ===
 let g:Illuminate_delay = 750
 hi illuminatedWord cterm=undercurl gui=undercurl
+
+" ===
+" === fzf.vim
+" ===
+nmap <silent> <c-p> :Files<cr>
+nmap <silent> <c-g> :GFiles<cr>
+" nmap <silent> <c-o> :Buffers<cr>
+nmap <c-f> :Rg!<space>
